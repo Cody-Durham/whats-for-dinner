@@ -103,18 +103,18 @@ function getRandomSide(side) {
   `
 };
 
-// function getRandomMainDish(main) {
-//   rightBoxContent.innerHTML = `
-//     <h1 class="right-box-upper-message">You should make:<h1>
-//     <h2 class="right-box-main-message">${main}</h2>`
-// };
+function getRandomMainDish(main) {
+  rightBoxContent.innerHTML = `
+    <h1 class="right-box-upper-message">You should make:<h1>
+    <h2 class="right-box-main-message">${main}</h2>`
+};
 
-// function getRandomDessert(dessert) {
-//   rightBoxContent.innerHTML = `
-//   <h1 class="right-box-upper-message">You should make:<h1>
-//   <h2 class="right-box-main-message">${dessert}</h2>
-//   `
-// };
+function getRandomDessert(dessert) {
+  rightBoxContent.innerHTML = `
+  <h1 class="right-box-upper-message">You should make:<h1>
+  <h2 class="right-box-main-message">${dessert}</h2>
+  `
+};
 
 function clearAll() {
   clearButton.classList.add('hidden');
@@ -124,9 +124,9 @@ function clearAll() {
     </section>`
 
     console.log('test');
-    // sideRadioButton = false;
-    // mainDishRadioButton = false;
-    // dessertRadioButton = false; 
+    sideRadioButton.checked = false;
+    mainDishRadioButton.checked = false;
+    dessertRadioButton.checked = false; 
 };
 
 
