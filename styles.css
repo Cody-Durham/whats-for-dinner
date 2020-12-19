@@ -118,6 +118,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .right-box-upper-message {
@@ -148,10 +149,7 @@ h2 {
 }
 
 .clear-button {
-  cursor: pointer;
-  position: absolute;
-  top: 760px;
-  right: 450px;
+  margin-top: 39px;
   width: 150px;
   height: 40px;
   border-radius: 4px;
@@ -159,3 +157,4 @@ h2 {
   background: #0fb9b1;
   font-size: .9em;
 }
+

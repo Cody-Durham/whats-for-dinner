@@ -65,7 +65,6 @@ var dessert = [
 //Event Listeners here---------------------------->
 letsCookButton.addEventListener('click', showMyMeal);
 clearButton.addEventListener('click', clearAll);
-// errorButton.addEventListener('click', showErrorMessage)
 
 
 //Functions here---------------------------->
@@ -144,6 +143,8 @@ function showClearButton() {
 function showErrorMessage() {
   if (sideRadioButton.checked === false && mainDishRadioButton.checked === false && dessertRadioButton.checked === false) {
     rightBoxContent.innerHTML = `
-    <p>Need to select an option first</p>`
+          <div class="">
+            <p>Please select an option</p>
+          </div>`
   }
 };
