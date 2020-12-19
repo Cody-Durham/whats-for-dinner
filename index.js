@@ -144,6 +144,8 @@ function showClearButton() {
 function showErrorMessage() {
   if (sideRadioButton.checked === false && mainDishRadioButton.checked === false && dessertRadioButton.checked === false) {
     rightBoxContent.innerHTML = `
-    <p>Need to select an option first</p>`
+    <div class="h2 animate">
+            <p>Please select an option</p>
+          </div>`
   }
 };
