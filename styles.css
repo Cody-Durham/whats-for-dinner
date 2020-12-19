@@ -143,23 +143,19 @@ h2 {
   align-items: center; 
 }
 
-.clear-button {
-  cursor: pointer;
-  width: 150px;
-  /* height: 100; */
-  /* margin: 0px 0px 10px 0px; */
-  border-radius: 4px;
-  border-color: #0fb9b1;
-  background: #0fb9b1;
-  font-size: .32em;
-}
-
 .pointer {
   cursor: pointer
 }
 
 .little-button {
+  cursor: pointer;
   position: absolute;
-  top: 60%;
-  right: 27.5%;
+  top: 55%;
+  right: 24%;
+  width: 150px;
+  height: 40px;
+  border-radius: 4px;
+  border-color: #0fb9b1;
+  background: #0fb9b1;
+  font-size: .9em;
 }
