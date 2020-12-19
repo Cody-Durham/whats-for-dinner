@@ -150,8 +150,8 @@ h2 {
 .clear-button {
   cursor: pointer;
   position: absolute;
-  top: 52.2%;
-  right: 24%;
+  top: 760px;
+  right: 450px;
   width: 150px;
   height: 40px;
   border-radius: 4px;
