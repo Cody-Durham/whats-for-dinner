@@ -4,7 +4,7 @@ var mainDishRadioButton = document.querySelector('.main-dish');
 var dessertRadioButton = document.querySelector('.dessert-dish');
 // var entireMealRadioButton = document.querySelector('.entire-meal');
 // var clearButton = document.querySelector('.clear-button');
-var littleButton = document.querySelector('.little-button');
+var clearButton = document.querySelector('.clear-button');
 
 var rightBoxContent = document.querySelector('.right-box-content');
 
@@ -66,7 +66,7 @@ var entireMeal = [];
 // sideRadioButton.addEventListener('click', showSide);
 
 letsCookButton.addEventListener('click', showMyMeal);
-littleButton.addEventListener('click', clearAll);
+clearButton.addEventListener('click', clearAll);
 
 
 //Functions here---------------------------->
@@ -96,7 +96,7 @@ function showMyMeal() {
 };
 
 function getRandomSide(side) {
-  littleButton.classList.remove('hidden');
+  clearButton.classList.remove('hidden');
   rightBoxContent.innerHTML = `
   <h1 class="right-box-upper-message">You should make:<h1>
   <h2 class="right-box-main-message">${side}</h2>
@@ -117,10 +117,10 @@ function getRandomSide(side) {
 // };
 
 function clearAll() {
+  clearButton.classList.add('hidden');
   rightBoxContent.innerHTML = `
     <section class="right-box-content">
       <img id="right-img" src="./assets/cookpot.svg">
-      <button class="clear-button hover hidden" type="button">CLEAR</button>
     </section>`
 
     console.log('test');

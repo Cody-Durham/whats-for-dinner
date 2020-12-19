@@ -11,9 +11,9 @@ red - #ee5253
   transform: rotate(360deg) scale(1.2);
 } */
 .hover:hover {
- background:#922E2C;
+ background:#6B7C76;
  color: #E1DCDB;
- border-color: #922E2C;
+ border-color: #6B7C76;
 }
 
 .hidden {
@@ -132,7 +132,7 @@ h2 {
 }
 
 .right-box-content {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* background: rgba(215, 141, 125, .5); */
   font-size: 3em;
   width: 100%;
@@ -147,10 +147,10 @@ h2 {
   cursor: pointer
 }
 
-.little-button {
+.clear-button {
   cursor: pointer;
   position: absolute;
-  top: 55%;
+  top: 52.2%;
   right: 24%;
   width: 150px;
   height: 40px;
