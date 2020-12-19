@@ -10,6 +10,12 @@ red - #ee5253
 /* .big {
   transform: rotate(360deg) scale(1.2);
 } */
+.hover:hover {
+ background:#922E2C;
+ color: #E1DCDB;
+ border-color: #922E2C;
+}
+
 .hidden {
   display: none;
 }
@@ -126,11 +132,11 @@ h2 {
 }
 
 .right-box-content {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   /* background: rgba(215, 141, 125, .5); */
   font-size: 3em;
   width: 100%;
-  height: 50px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,3 +158,8 @@ h2 {
   cursor: pointer
 }
 
+.little-button {
+  position: absolute;
+  top: 60%;
+  right: 27.5%;
+}

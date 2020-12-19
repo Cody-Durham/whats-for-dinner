@@ -3,6 +3,7 @@ var sideRadioButton = document.querySelector('.side-dish');
 var mainDishRadioButton = document.querySelector('.main-dish');
 var dessertRadioButton = document.querySelector('.dessert-dish');
 // var entireMealRadioButton = document.querySelector('.entire-meal');
+// var clearButton = document.querySelector('.clear-button');
 
 var rightBoxContent = document.querySelector('.right-box-content');
 
@@ -64,6 +65,7 @@ var entireMeal = [];
 // sideRadioButton.addEventListener('click', showSide);
 
 letsCookButton.addEventListener('click', showMyMeal);
+// clearButton.addEventListener('click', clearAll);
 
 
 //Functions here---------------------------->
@@ -73,10 +75,12 @@ function getRandomIndex(array) {
 
 
 function showMyMeal() {
+  // clearButton.classList.remove('.hidden');
   var randomSide = sides[getRandomIndex(sides)];
   var randomMainDish = mainDish[getRandomIndex(mainDish)];
   var randomDessert = dessert[getRandomIndex(dessert)];
   
+
   if (sideRadioButton.checked === true) {
     getRandomSide(randomSide);
   } 
@@ -89,32 +93,33 @@ function showMyMeal() {
 };
 
 function getRandomSide(side) {
+  // clearButton.classList.add('hidden');
   rightBoxContent.innerHTML = `
   <h1 class="right-box-upper-message">You should make:<h1>
   <h2 class="right-box-main-message">${side}</h2>
-  <button class="clear-button" type="button">CLEAR</button>`
+  `
 };
 
-function getRandomMainDish(main) {
-  rightBoxContent.innerHTML = `
-    <h1 class="right-box-upper-message">You should make:<h1>
-    <h2 class="right-box-main-message">${main}</h2>
-    <button class="clear-button" type="button">CLEAR</button>`
-};
+// function getRandomMainDish(main) {
+//   rightBoxContent.innerHTML = `
+//     <h1 class="right-box-upper-message">You should make:<h1>
+//     <h2 class="right-box-main-message">${main}</h2>`
+// };
 
-function getRandomDessert(dessert) {
-  rightBoxContent.innerHTML = `
-  <h1 class="right-box-upper-message">You should make:<h1>
-  <h2 class="right-box-main-message">${dessert}</h2>
-  <button class="clear-button" type="button">CLEAR</button>`
-  
-};
+// function getRandomDessert(dessert) {
+//   rightBoxContent.innerHTML = `
+//   <h1 class="right-box-upper-message">You should make:<h1>
+//   <h2 class="right-box-main-message">${dessert}</h2>
+//   `
+// };
 
 function clearAll() {
+  rightBoxContent.innerHTML = ``
 
-sideRadioButton.checked = false; 
-mainDishRadioButton = false;
-dessertRadioButton = false; 
+    console.log('test');
+    // sideRadioButton = false;
+    // mainDishRadioButton = false;
+    // dessertRadioButton = false; 
 };
 
 
