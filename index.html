@@ -6,7 +6,7 @@
   <body>
     <section class="header">
       <h2>What's for dinner?</h2>
-      <button class="add-recipe-button hover" type="button">ADD A RECIPE</button>
+      <button class="add-recipe-header-btn hover" type="button">ADD A RECIPE</button>
     </section>
     <section class="main-page">
         <section class="left-box">
@@ -46,9 +46,36 @@
         <section class="main-photo">
           <img src="./assets/burger-friends.jpg" alt="Peeps eating burgers and fries">
         </section>
-    </section>  
-      <form class="add-recipe-footer hidden">
-      </form>
+    </section> 
+
+    
+    
+    <form class="add-recipe-footer hidden">
+      <div class='inner-box'>
+        
+        <div class="type">
+          <label for="recipe-value">Recipe Name</label>
+          <input class="recipe-value" placeholder="Name of new food!"></input>
+        </div>
+        <div>
+          <select class="dropdown">
+            <option class="blank" id="blank" value="blank">Select One</option>
+            <option class="side" id="side" value="side1">Side Meal</option>
+            <option class="main" id="main" value="main1">Main Meal</option>
+            <option class="dessert" id="dessert" value="dessert1">Dessert</option>
+          </select>
+        </div>
+          
+        <div>
+            <!-- <label for="recipe-type">Recipe Type</label>
+            <input class="recipe-type" placeholder="Side/MainDish/Dessert"></input> -->
+            <button class="add-recipe-footer-btn" type="button">ADD NEW</button>
+          </div>
+        </div>
+    </form>
+
+
+
   </body>
   <script type="text/javascript" src="index.js"></script>
 

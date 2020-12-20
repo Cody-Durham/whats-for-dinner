@@ -6,10 +6,19 @@ var entireMealRadioButton = document.querySelector('.entire-meal');
 var clearButton = document.querySelector('.clear-button');
 var rightBoxContent = document.querySelector('.right-box-content');
 var letsCookButton = document.querySelector('.left-box-button');
+var footerBar = document.querySelector('.add-recipe-footer');
+
+// var dropdown0 = document.querySelector('#blank');
+// var dropdownSide = document.querySelector('.side');
+// var dropdownMain = document.querySelector('.main');
+// var dropdownDessert = document.querySelector('.dessert');
+var dropdownList = document.querySelector('.dropdown');
 
 
-var addRecipeButton = document.querySelector('.add-recipe-button');
-var addRecipeFooter = document.querySelector('.add-recipe-footer');
+var headerBtn = document.querySelector('.add-recipe-header-btn');
+var footerBtn = document.querySelector('.add-recipe-footer-btn');
+
+var recipeValue = document.querySelector('.recipe-value');
 
 
 
@@ -60,13 +69,14 @@ var dessert = [
   'Croissants',
   'Eclairs',
 ];
-// var entireMeal = [];
-
+// var testArray = [];
 
 //Event Listeners here---------------------------->
 letsCookButton.addEventListener('click', showMyMeal);
 clearButton.addEventListener('click', clearAll);
-addRecipeButton.addEventListener('click', showAddRecipe)
+
+headerBtn.addEventListener('click', showAddRecipeFooter);
+footerBtn.addEventListener('click', addMeal);
 
 
 
@@ -74,25 +84,6 @@ addRecipeButton.addEventListener('click', showAddRecipe)
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
 };
-
-function showAddRecipe() {
-  addRecipeFooter.classList.remove('hidden');
-  addRecipeFooter.innerHTML = `
-  <form class="add-recipe-footer">
-  <div class='inner-box'>
-    <div class="type">
-      <label for="recipe-type">Recipe Type</label>
-      <input></input>
-    </div>
-      <div>
-        <label for="recipe-name">Recipe Name</label>
-        <input></input>
-        <button class="recipe-button">test</button>
-      </div>
-    </div>
-</form>
-  `
-  };
 
 
 function showMyMeal() {
@@ -156,7 +147,6 @@ function clearAll() {
     <section class="right-box-content">
       <img id="right-img" src="./assets/cookpot.svg">
     </section>`
-    console.log('test'); 
 };
 
 function showClearButton() {
@@ -171,3 +161,39 @@ function showErrorMessage() {
           </div>`
   }
 };
+
+function showAddRecipeFooter() {
+  footerBar.classList.toggle('hidden');
+  };
+ 
+
+function addSide() {
+  sides.push(recipeValue.value);
+};
+
+function addMain() {
+  mainDish.push(recipeValue.value);
+};
+  
+function addDessert() {
+  dessert.push(recipeValue.value)
+  };
+
+
+  function addMeal() {
+   if (dropdownList.value === 'side1') {
+     addSide();
+   } else if (dropdownList.value === 'main1') {
+     addMain();
+   } else if (dropdownList.value === 'dessert1') {
+     addDessert();
+   } else {
+     return;
+   }
+  };
+
+
+
+  // dropdownSide = true;
+    // dropdownMain = true; 
+    // dropdownDessert = true;
