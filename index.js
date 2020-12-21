@@ -1,18 +1,19 @@
-//Targets here---------------------------->
 var sideRadioButton = document.querySelector('.side-dish');
 var mainDishRadioButton = document.querySelector('.main-dish');
 var dessertRadioButton = document.querySelector('.dessert-dish');
 var entireMealRadioButton = document.querySelector('.entire-meal');
-// var clearButton = document.querySelector('.clear-button');
 var clearButton = document.querySelector('.clear-button');
-// var errorButton = document.querySelector('.error');
-
 var rightBoxContent = document.querySelector('.right-box-content');
-
 var letsCookButton = document.querySelector('.left-box-button');
+var footerBar = document.querySelector('.add-recipe-footer');
+
+var dropdownList = document.querySelector('.dropdown');
+var headerBtn = document.querySelector('.add-recipe-header-btn');
+var footerBtn = document.querySelector('.add-recipe-footer-btn');
+var recipeValue = document.querySelector('.recipe-value');
 
 
-//Global Variables here---------------------------->
+
 var sides = [
   'Miso Glazed Carrots',
   'Coleslaw',
@@ -59,15 +60,15 @@ var dessert = [
   'Croissants',
   'Eclairs',
 ];
-// var entireMeal = [];
 
 
-//Event Listeners here---------------------------->
 letsCookButton.addEventListener('click', showMyMeal);
 clearButton.addEventListener('click', clearAll);
+headerBtn.addEventListener('click', showAddRecipeFooter);
+footerBtn.addEventListener('click', addMeal);
 
 
-//Functions here---------------------------->
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
 };
@@ -77,7 +78,6 @@ function showMyMeal() {
   var randomSide = sides[getRandomIndex(sides)];
   var randomMainDish = mainDish[getRandomIndex(mainDish)];
   var randomDessert = dessert[getRandomIndex(dessert)];
-  // var entireMeal = randomSide + randomMainDish + randomDessert;
 
   if (sideRadioButton.checked === true) {
     getRandomSide(randomSide);
@@ -129,11 +129,12 @@ function clearAll() {
   sideRadioButton.checked = false;
   mainDishRadioButton.checked = false;
   dessertRadioButton.checked = false;
+  entireMealRadioButton.checked = false;
+  
   rightBoxContent.innerHTML = `
     <section class="right-box-content">
       <img id="right-img" src="./assets/cookpot.svg">
     </section>`
-    console.log('test'); 
 };
 
 function showClearButton() {
@@ -143,8 +144,36 @@ function showClearButton() {
 function showErrorMessage() {
   if (sideRadioButton.checked === false && mainDishRadioButton.checked === false && dessertRadioButton.checked === false) {
     rightBoxContent.innerHTML = `
-          <div class="">
-            <p>Please select an option</p>
-          </div>`
+      <div class="">
+        <p>Please select an option</p>
+      </div>`
   }
 };
+
+function addMeal() {
+  if (dropdownList.value === 'side1') {
+    addSide();
+  } else if (dropdownList.value === 'main1') {
+    addMain();
+  } else if (dropdownList.value === 'dessert1') {
+    addDessert();
+  } else {
+    return;
+  }
+ };
+
+function showAddRecipeFooter() {
+  footerBar.classList.toggle('hidden');
+  };
+
+function addSide() {
+  sides.push(recipeValue.value);
+};
+
+function addMain() {
+  mainDish.push(recipeValue.value);
+};
+  
+function addDessert() {
+  dessert.push(recipeValue.value)
+  };
