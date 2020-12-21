@@ -13,4 +13,4 @@ This project allows the user to generate randomly created food options from a pu
 JavaScript, HTML & CSS
 
 ## Authors
-*Cody Durham*
+Cody Durham
